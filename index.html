@@ -233,51 +233,35 @@
             padding: 0 15px;
         }
         
-        .domain-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-            padding: 0 15px;
+        .divider {
+            width: 80%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 30px auto;
         }
         
-        .highlight-card {
+        .feature-card {
             background: rgba(30, 41, 59, 0.6);
             border-radius: 18px;
             padding: 25px;
             text-align: center;
             border: 1px solid var(--glass);
             transition: all 0.3s;
+            max-width: 500px;
+            margin: 0 auto 25px;
         }
         
-        .highlight-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(99, 102, 241, 0.3);
-        }
-        
-        .highlight-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--gold), #ffcc00);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 24px;
-            color: var(--dark);
-        }
-        
-        .highlight-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: var(--light);
+            font-family: 'Montserrat', sans-serif;
         }
         
-        .highlight-card p {
-            text-align: center;
-            font-size: 0.95rem;
+        .feature-card p {
+            font-size: 1rem;
             color: var(--gray);
+            text-align: center;
         }
         
         /* Offer Form Section */
@@ -372,26 +356,6 @@
         .form-group textarea::placeholder {
             color: var(--gray);
             font-size: 0.9rem;
-        }
-        
-        .offer-amount {
-            position: relative;
-        }
-        
-        .offer-amount input {
-            padding-left: 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .currency-symbol {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gold);
-            font-size: 1.1rem;
-            font-weight: 700;
         }
         
         .submit-button {
@@ -500,6 +464,7 @@
             
             h1 {
                 font-size: 2.2rem;
+                line-height: 1.25;
             }
             
             .hero p {
@@ -526,15 +491,6 @@
             
             .offer-form {
                 padding: 25px;
-            }
-            
-            .domain-highlights {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .highlight-card {
-                padding: 20px;
             }
         }
         
@@ -611,11 +567,6 @@
                 padding: 12px;
             }
             
-            .offer-amount input {
-                padding-left: 35px;
-                font-size: 1rem;
-            }
-            
             .submit-button {
                 padding: 14px;
                 font-size: 1rem;
@@ -655,8 +606,8 @@
                 padding: 0 10px;
             }
             
-            .domain-highlights {
-                padding: 0 10px;
+            .feature-card {
+                padding: 20px 15px;
             }
         }
     </style>
@@ -683,7 +634,7 @@
                 <div class="domain-badge floating">
                     <i class="fas fa-certificate"></i> Ultra Premium Domain
                 </div>
-                <h1>Acquire the Exclusive <span>Zoeo.ai</span> Domain</h1>
+                <h1>Acquire the Exclusive<br><span>Zoeo.ai</span> Domain</h1>
                 <p>Zoeo.ai is a highly valuable domain name in the artificial intelligence space. Short, memorable, and brandable, this premium domain represents a unique opportunity to establish a powerful presence in the rapidly growing AI industry.</p>
                 
                 <div class="domain-value floating">
@@ -703,28 +654,21 @@
                 
                 <p>The .ai extension has become the gold standard for AI companies, startups, and innovators. Owning Zoeo.ai positions your brand at the forefront of the artificial intelligence revolution and gives instant credibility in this competitive space.</p>
                 
-                <div class="domain-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>Brand Power</h3>
-                        <p>Short, memorable name perfect for AI products and services</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Global Appeal</h3>
-                        <p>Works across cultures and languages with universal recognition</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Investment Value</h3>
-                        <p>.ai domains have shown consistent appreciation over time</p>
-                    </div>
+                <div class="divider"></div>
+                
+                <div class="feature-card">
+                    <h3>Brand Power</h3>
+                    <p>Short, memorable name perfect for AI products and services</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Global Appeal</h3>
+                    <p>Works across cultures and languages with universal recognition</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Investment Value</h3>
+                    <p>.ai domains have shown consistent appreciation over time</p>
                 </div>
             </div>
         </div>
@@ -748,9 +692,8 @@
                         <input type="email" id="email" placeholder="Enter your email" required>
                     </div>
                     
-                    <div class="form-group offer-amount">
+                    <div class="form-group">
                         <label for="offer">Your Offer Price (USD)</label>
-                        <div class="currency-symbol">$</div>
                         <input type="number" id="offer" placeholder="Enter your offer amount" min="10000" required>
                     </div>
                     
@@ -797,17 +740,6 @@
             }
         });
         
-        // Add floating animation to cards
-        document.querySelectorAll('.highlight-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.classList.add('floating');
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.classList.remove('floating');
-            });
-        });
-        
         // Form submission handling
         document.getElementById('offerForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -827,14 +759,6 @@
             // Reset form
             this.reset();
         });
-        
-        // Ensure gradient text works on mobile
-        const gradientText = document.querySelector('.hero h1 span');
-        if (window.innerWidth < 768) {
-            gradientText.style.background = 'linear-gradient(135deg, #ffd700, #ffcc00)';
-            gradientText.style.webkitBackgroundClip = 'text';
-            gradientText.style.webkitTextFillColor = 'transparent';
-        }
     </script>
 </body>
 </html>
