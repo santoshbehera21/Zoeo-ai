@@ -492,135 +492,6 @@
             font-size: 0.9rem;
         }
         
-        /* Popup Styles */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .popup-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .popup-container {
-            background: linear-gradient(135deg, #0a0e17, #0d2b5e);
-            width: 90%;
-            max-width: 500px;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid var(--zoeo-pink);
-            box-shadow: 0 0 30px rgba(255, 58, 142, 0.5);
-            position: relative;
-            transform: translateY(20px);
-            transition: transform 0.4s ease;
-        }
-        
-        .popup-overlay.active .popup-container {
-            transform: translateY(0);
-        }
-        
-        .popup-header {
-            background: rgba(255, 58, 142, 0.1);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 58, 142, 0.3);
-        }
-        
-        .popup-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            color: var(--zoeo-pink);
-            margin-bottom: 10px;
-        }
-        
-        .popup-subtitle {
-            color: var(--platinum);
-            font-size: 1.1rem;
-        }
-        
-        .popup-body {
-            padding: 30px;
-        }
-        
-        .popup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .form-label {
-            font-size: 0.9rem;
-            color: var(--electric-blue);
-        }
-        
-        .form-input {
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: 1px solid rgba(77, 229, 255, 0.3);
-            background: rgba(10, 14, 23, 0.5);
-            color: white;
-            font-family: 'Exo 2', sans-serif;
-            transition: all 0.3s ease;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: var(--zoeo-pink);
-            box-shadow: 0 0 10px rgba(255, 58, 142, 0.3);
-        }
-        
-        .popup-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: transparent;
-            border: none;
-            color: var(--platinum);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .popup-close:hover {
-            color: var(--zoeo-pink);
-        }
-        
-        .popup-button {
-            background: linear-gradient(45deg, var(--zoeo-pink), var(--neural-purple));
-            color: white;
-            border: none;
-            padding: 14px;
-            border-radius: 8px;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-        
-        .popup-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 58, 142, 0.4);
-        }
-        
         /* Animations */
         @keyframes pulse {
             0% { opacity: 0.6; }
@@ -702,55 +573,19 @@
         <span id="toast-message">Your offer has been submitted successfully!</span>
     </div>
     
-    <!-- Popup Modal -->
-    <div class="popup-overlay" id="popup">
-        <div class="popup-container">
-            <button class="popup-close" id="close-popup">&times;</button>
-            <div class="popup-header">
-                <h3 class="popup-title">EXCLUSIVE DOMAIN OFFER</h3>
-                <p class="popup-subtitle">zoeo.ai is available for acquisition</p>
-            </div>
-            <div class="popup-body">
-                <form id="lead-form" class="popup-form">
-                    <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-input" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Company</label>
-                        <input type="text" class="form-input" id="company" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-input" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Phone</label>
-                        <input type="tel" class="form-input" id="phone">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-input" id="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="popup-button">REQUEST PRIVATE SALE BRIEFING</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
             <h1 class="domain-name floating">ZOEO.AI</h1>
             <p class="tagline">The Revolutionary SaaS Platform for Next-Generation AI Solutions</p>
             
-            <div class="price-tag">$100,000</div>
+            <div class="price-tag">$50,000</div>
             
             <div class="neural-network">
                 <div id="neural-visualization"></div>
             </div>
             
-            <button class="cta-button gradient" id="open-popup">REQUEST PRIVATE SALE BRIEFING</button>
+            <a href="#features" class="cta-button gradient">MAKE AN OFFER</a>
             <p class="pulse">Exclusive offer for qualified investors only</p>
         </div>
     </section>
@@ -792,7 +627,7 @@
                 <form id="offer-form" class="offer-form">
                     <div class="form-group">
                         <label for="offer-amount">Offer Amount (USD)</label>
-                        <input type="number" id="offer-amount" name="offer-amount" min="1000" step="1000" required>
+                        <input type="number" id="offer-amount" name="offer-amount" min="1000" step="1000" required value="50000">
                     </div>
                     
                     <div class="form-group">
@@ -834,7 +669,7 @@
             <div class="pricing-container">
                 <div class="pricing-option">
                     <h3 class="pricing-title">Full Acquisition</h3>
-                    <div class="pricing-price">$100,000</div>
+                    <div class="pricing-price">$50,000</div>
                     <p>Immediate ownership transfer with all rights</p>
                     <ul class="pricing-features">
                         <li>Complete domain ownership</li>
@@ -843,12 +678,12 @@
                         <li>Lifetime usage rights</li>
                         <li>Escrow.com protection</li>
                     </ul>
-                    <button class="cta-button" id="open-popup-2">ACQUIRE NOW</button>
+                    <a href="#features" class="cta-button">MAKE OFFER</a>
                 </div>
                 
                 <div class="pricing-option pricing-highlight">
                     <h3 class="pricing-title">Lease-to-Own</h3>
-                    <div class="pricing-price">$3,500/mo</div>
+                    <div class="pricing-price">$1,500/mo</div>
                     <p>24-month term with ownership at completion</p>
                     <ul class="pricing-features">
                         <li>Low initial commitment</li>
@@ -857,7 +692,7 @@
                         <li>Priority transfer at term end</li>
                         <li>Includes usage rights</li>
                     </ul>
-                    <button class="cta-button" id="open-popup-3">START LEASE</button>
+                    <a href="#features" class="cta-button">START LEASE</a>
                 </div>
             </div>
         </div>
@@ -935,7 +770,7 @@
         "@type": "Offer",
         "url": "https://zoeo.ai",
         "priceCurrency": "USD",
-        "price": "100000",
+        "price": "50000",
         "itemCondition": "https://schema.org/NewCondition",
         "availability": "https://schema.org/InStock",
         "seller": {
@@ -1123,79 +958,25 @@
                 });
             }
             
-            // Popup functionality
-            const popup = document.getElementById('popup');
-            const openButtons = document.querySelectorAll('.cta-button, #open-popup, #open-popup-2, #open-popup-3');
-            const closeButton = document.getElementById('close-popup');
-            const leadForm = document.getElementById('lead-form');
-            
-            // Open popup
-            openButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    popup.classList.add('active');
-                });
-            });
-            
-            // Close popup
-            closeButton.addEventListener('click', () => {
-                popup.classList.remove('active');
-            });
-            
-            // Close popup when clicking outside
-            popup.addEventListener('click', (e) => {
-                if (e.target === popup) {
-                    popup.classList.remove('active');
-                }
-            });
-            
-            // Form submission
-            leadForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+            // Toast notification function
+            function showToast(message, type = 'success') {
+                const toast = document.getElementById('toast');
+                const toastMessage = document.getElementById('toast-message');
                 
-                // Get form values
-                const name = document.getElementById('name').value;
-                const company = document.getElementById('company').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
+                toast.className = 'toast';
+                toast.classList.add(type);
+                toastMessage.textContent = message;
                 
-                // Create lead object
-                const lead = {
-                    name,
-                    company,
-                    email,
-                    phone,
-                    message,
-                    domain: 'zoeo.ai',
-                    price: 100000,
-                    date: new Date().toISOString()
-                };
+                // Show toast
+                setTimeout(() => {
+                    toast.classList.add('show');
+                }, 100);
                 
-                // Send lead data to email via Formspree
-                const formEndpoint = 'https://formspree.io/f/mvojpzqa';
-                
-                fetch(formEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(lead)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        showToast('Thank you! Your inquiry has been submitted. We will contact you shortly.', 'success');
-                        leadForm.reset();
-                        popup.classList.remove('active');
-                    } else {
-                        showToast('There was an error submitting your request. Please try again.', 'error');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    showToast('There was an error submitting your request. Please try again.', 'error');
-                });
-            });
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+            }
             
             // Offer form submission
             const offerForm = document.getElementById('offer-form');
@@ -1222,57 +1003,30 @@
                     date: new Date().toISOString()
                 };
                 
-                // Send offer data to email via Formspree
-                const offerEndpoint = 'https://formspree.io/f/mvojpzqa';
+                // Send offer data to email
+                const emailBody = `
+                    New Offer for Zoeo.ai Domain:
+                    
+                    Offer Amount: $${amount}
+                    Name: ${name}
+                    Email: ${email}
+                    Company: ${company || 'Not provided'}
+                    Phone: ${phone || 'Not provided'}
+                    Message: ${message || 'No additional message'}
+                    
+                    Please respond to this inquiry promptly.
+                `;
                 
-                fetch(offerEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(offer)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        showToast('Thank you! Your offer has been submitted successfully.', 'success');
-                        offerForm.reset();
-                    } else {
-                        showToast('There was an error submitting your offer. Please try again.', 'error');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    showToast('There was an error submitting your offer. Please try again.', 'error');
-                });
+                // Create mailto link
+                const mailtoLink = `mailto:santoshbehera21@gmail.com?subject=New Offer for Zoeo.ai - $${amount}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                showToast('Thank you! Your offer has been submitted successfully.', 'success');
+                offerForm.reset();
             });
-            
-            // Toast notification function
-            function showToast(message, type = 'success') {
-                const toast = document.getElementById('toast');
-                const toastMessage = document.getElementById('toast-message');
-                
-                toast.className = 'toast';
-                toast.classList.add(type);
-                toastMessage.textContent = message;
-                
-                // Show toast
-                setTimeout(() => {
-                    toast.classList.add('show');
-                }, 100);
-                
-                // Hide after 5 seconds
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 5000);
-            }
-            
-            // Open popup after delay
-            setTimeout(() => {
-                if (!popup.classList.contains('active')) {
-                    popup.classList.add('active');
-                }
-            }, 10000); // 10 seconds
         });
     </script>
 </body>
